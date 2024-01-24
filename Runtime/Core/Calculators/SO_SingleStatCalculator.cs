@@ -6,7 +6,19 @@ namespace StdNounou.Health
 {
     public abstract class SO_SingleStatCalculator : ScriptableObject
     {
-        [SerializeField] protected bool calculateReceivingAffiliationStatModifierFirst;
+        [SerializeField] protected E_Calculation[] calculationOrder = new E_Calculation[]
+            {
+                E_Calculation.ReceivingAffiliationModfier,
+                E_Calculation.InflictingAffiliationModifier,
+                E_Calculation.AttributesModifiers
+            };
+
+        public enum E_Calculation
+        {
+            ReceivingAffiliationModfier,
+            InflictingAffiliationModifier,
+            AttributesModifiers,
+        }
 
         public abstract void CalculateStat(SO_DamageCalculator calculator, ref float currentDamagesValue);
 
@@ -29,19 +41,43 @@ namespace StdNounou.Health
             return true;
         }
 
-        protected void GetModifierStatFromAffliation(SO_DamageCalculator calculator, E_StatsKeys statKey, ref float stat)
+        protected void CalculateStat(SO_DamageCalculator calcualtor, E_StatsKeys statKey, ref float stat)
+        {
+            foreach (var item in calculationOrder) 
+            {
+                switch (item)
+                {
+                    case E_Calculation.ReceivingAffiliationModfier:
+                        if (calcualtor.GetHasAffiliationModifiers)
+                            GetModifierStatFromAffliation(calcualtor, statKey, true, ref stat);
+                        break;
+                    case E_Calculation.InflictingAffiliationModifier:
+                        if (calcualtor.GetHasAffiliationModifiers)
+                            GetModifierStatFromAffliation(calcualtor, statKey, false, ref stat);
+                        break;
+                    case E_Calculation.AttributesModifiers:
+                        GetModifiedStatFromAttributes(calcualtor, statKey, ref stat);
+                        break;
+                }
+            }
+        }
+
+        protected void GetModifierStatFromAffliation(SO_DamageCalculator calculator, E_StatsKeys statKey, bool receiver, ref float stat)
         {
             SO_Affiliation ownerAffiliation = calculator.GetOwnerHandler.GetAffiliation();
-            if (calculateReceivingAffiliationStatModifierFirst)
-            {
+            if (receiver)
                 stat = ownerAffiliation.TryGetModifiedStat(calculator.GetDamagerAffiliation, statKey, stat, true);
-                stat = calculator.GetDamagerAffiliation.TryGetModifiedStat(ownerAffiliation, statKey, stat, false);
-            }
             else
-            {
                 stat = calculator.GetDamagerAffiliation.TryGetModifiedStat(ownerAffiliation, statKey, stat, false);
-                stat = ownerAffiliation.TryGetModifiedStat(calculator.GetDamagerAffiliation, statKey, stat, true);
+        }
+
+        protected void GetModifiedStatFromAttributes(SO_DamageCalculator calculator, E_StatsKeys statsKeys,  ref float stat)
+        {
+            foreach (var item in calculator.GetAttackAttributes)
+            {
+                stat = calculator.GetOwnerHandler.TryGetModifiedStatFromAttribute(item, statsKeys, stat);
             }
+            
         }
     }
 }

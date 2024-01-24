@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8e49374ba6c61469503cd6007ecb93, type: 3}
+  m_Name: FireProjectile
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: Fire Projectile
+  <Attributes>k__BackingField:
+  - {fileID: 11400000, guid: 63e019431fe5fc3478640d3743843924, type: 2}
+  color: {r: 1, g: 0.5102247, b: 0, a: 1}
+  <OwnerDamagesPercentage>k__BackingField: 100
+  <TickDamagesData>k__BackingField: {fileID: 11400000, guid: b998fad349fc3c64881fd1926e50057f, type: 2}

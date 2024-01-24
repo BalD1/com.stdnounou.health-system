@@ -14,10 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <EntityName>k__BackingField: Dummy
   <Affiliation>k__BackingField: {fileID: 11400000, guid: 95c9001f76d6c334187f670346027b8f, type: 2}
+  <Attributes>k__BackingField:
+  - {fileID: 11400000, guid: e0ebad9a0a401b84bb55dbe9b4c85be4, type: 2}
   <Stats>k__BackingField:
     _serializedList:
     - Key: 0
       Value:
         <LowestAllowedValue>k__BackingField: 0
         <Value>k__BackingField: 100
+        <HigherAllowedValue>k__BackingField: 1000
+    - Key: 2
+      Value:
+        <LowestAllowedValue>k__BackingField: 0
+        <Value>k__BackingField: 0
         <HigherAllowedValue>k__BackingField: 1000

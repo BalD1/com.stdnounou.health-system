@@ -8,9 +8,8 @@ namespace StdNounou.Health
 	{
         public override void CalculateStat(SO_DamageCalculator calculator, ref float currentDamagesValue)
         {
-            if (!TryGetStatFromDamager(calculator, E_StatsKeys.DamageReduction, out float result)) return;
-            if (!calculator.GetHasAffiliationModifiers) return;
-            GetModifierStatFromAffliation(calculator, E_StatsKeys.DamageReduction, ref result);
+            if (!TryGetStatFromOwner(calculator, E_StatsKeys.DamageReduction, out float result)) return;
+            CalculateStat(calculator, E_StatsKeys.DamageReduction, ref result);
             currentDamagesValue -= result;
         }
     } 

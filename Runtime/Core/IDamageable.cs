@@ -29,14 +29,16 @@ namespace StdNounou.Health
         {
             public object Damager { get; private set; }
             public SO_Affiliation DamagerAffiliation { get; private set; }
+            public SO_Attribute[] AttackAttributes { get; private set; }
             public SO_DamagesType DamagesType { get; private set; }
             public Dictionary<E_StatsKeys, float> Stats { get; private set; }
             public Vector3 DamagesDirection { get; private set; }
 
-            public DamagesData(object damager, StatsHandler statsHandler, SO_DamagesType damagesType, Vector3 damagesDirection)
+            public DamagesData(object damager, StatsHandler statsHandler, SO_Attribute[] attackAttributes, SO_DamagesType damagesType, Vector3 damagesDirection)
             {
                 this.Damager = damager;
                 this.DamagerAffiliation = statsHandler.GetAffiliation();
+                this.AttackAttributes = attackAttributes;
                 this.DamagesType = damagesType;
                 this.Stats = new Dictionary<E_StatsKeys, float>();
                 foreach (var item in statsHandler.BrutFinalStats.Keys)
@@ -46,18 +48,20 @@ namespace StdNounou.Health
                 }
                 DamagesDirection = damagesDirection;
             }
-            public DamagesData(object damager, SO_Affiliation damagerAffiliation, SO_DamagesType damagesType, Dictionary<E_StatsKeys, float> stats, Vector3 damagesDirection)
+            public DamagesData(object damager, SO_Affiliation damagerAffiliation, SO_Attribute[] attackAttributes, SO_DamagesType damagesType, Dictionary<E_StatsKeys, float> stats, Vector3 damagesDirection)
             {
                 Damager = damager;
                 DamagerAffiliation = damagerAffiliation;
+                AttackAttributes = attackAttributes;
                 DamagesType = damagesType;
                 Stats = stats;
                 DamagesDirection = damagesDirection;
             }
-            public DamagesData(object damager, SO_Affiliation damagerAffiliation, SO_DamagesType damagesType, Dictionary<E_StatsKeys, float> stats)
+            public DamagesData(object damager, SO_Affiliation damagerAffiliation, SO_Attribute[] attackAttributes, SO_DamagesType damagesType, Dictionary<E_StatsKeys, float> stats)
             {
                 Damager = damager;
                 DamagerAffiliation = damagerAffiliation;
+                AttackAttributes = attackAttributes;
                 DamagesType = damagesType;
                 Stats = stats;
             }
@@ -67,6 +71,7 @@ namespace StdNounou.Health
         {
             public object Damager { get; private set; }
             public SO_Affiliation DamagerAffiliation { get; private set; }
+            public SO_Attribute[] AttackAttributes { get; private set; }
             public SO_DamagesType DamagesType { get; private set; }
             public bool IsCrit { get; private set; }
             public float Damages { get; private set; }
@@ -85,10 +90,11 @@ namespace StdNounou.Health
                 this.Damages = damages;
                 this.IsCrit = isCrit;
             }
-            public InflictedDamagesData(object damager, SO_Affiliation damagerAffiliation, SO_DamagesType damagesType, float damages, bool isCrit, Vector3 damageDirection, float knockbackForce)
+            public InflictedDamagesData(object damager, SO_Affiliation damagerAffiliation, SO_Attribute[] attackAttributes, SO_DamagesType damagesType, float damages, bool isCrit, Vector3 damageDirection, float knockbackForce)
             {
                 this.Damager = damager;
                 this.DamagerAffiliation = damagerAffiliation;
+                this.AttackAttributes = attackAttributes;
                 this.DamagesType = damagesType;
                 this.Damages = damages;
                 this.IsCrit = isCrit;

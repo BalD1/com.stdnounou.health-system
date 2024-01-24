@@ -50,7 +50,7 @@ namespace StdNounou.Health
 
         protected virtual void ApplyDamages()
         {
-            IDamageable.DamagesData damagesData = new IDamageable.DamagesData(damager, externalStatsHandler.GetAffiliation(), Data.DamagesType, CreateStatsDict());
+            IDamageable.DamagesData damagesData = new IDamageable.DamagesData(damager, externalStatsHandler.GetAffiliation(), Data.Attributes, Data.DamagesType, CreateStatsDict());
             targetDamageable.TryInflictDamages(damagesData);
         }
 

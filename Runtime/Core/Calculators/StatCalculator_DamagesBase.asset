@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350517b83b8283c46a0e34fc125a8b4f, type: 3}
   m_Name: StatCalculator_DamagesBase
   m_EditorClassIdentifier: 
-  calculateReceivingAffiliationStatModifierFirst: 0
+  calculationOrder: 000000000100000002000000

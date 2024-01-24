@@ -11,14 +11,13 @@ namespace StdNounou.Health
         {
             if (!TryGetStatFromDamager(calculator, E_StatsKeys.CritChances, out float critChances)) return;
             if (!TryGetStatFromDamager(calculator, E_StatsKeys.CritMultiplier, out float critMultiplier)) return;
-            if (!calculator.GetHasAffiliationModifiers) return;
+            CalculateStat(calculator, E_StatsKeys.CritChances, ref critChances);
 
-            GetModifierStatFromAffliation(calculator, E_StatsKeys.CritChances, ref critChances);
             if (critChances <= 0) return;
-            GetModifierStatFromAffliation(calculator, E_StatsKeys.CritMultiplier, ref critMultiplier);
-
+            CalculateStat(calculator, E_StatsKeys.CritMultiplier, ref critMultiplier);
             if (!RandomExtensions.PercentageChance(critChances)) return;
             currentDamagesValue *= critMultiplier;
+            calculator.SetIsCrit(true);
         }
     }
 }

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1129776d7587b747849084e83c603b2, type: 3}
+  m_Name: Attribute_Plant
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: Plant
+  <Modifiers>k__BackingField:
+    _serializedList:
+    - Key: {fileID: 11400000, guid: a7dc5662771580649b9beb6537f8c8e3, type: 2}
+      Value:
+        _serializedList:
+        - Key: 1
+          Value:
+            <Value>k__BackingField: 1000
+            <ModificationType>k__BackingField: 1
+    - Key: {fileID: 11400000, guid: 2cbebf97e2a7f6c479a7c1a1f2e86f87, type: 2}
+      Value:
+        _serializedList:
+        - Key: 1
+          Value:
+            <Value>k__BackingField: 2
+            <ModificationType>k__BackingField: 3
+    - Key: {fileID: 11400000}
+      Value:
+        _serializedList:
+        - Key: 1
+          Value:
+            <Value>k__BackingField: 1.5
+            <ModificationType>k__BackingField: 3
+    - Key: {fileID: 11400000, guid: 63e019431fe5fc3478640d3743843924, type: 2}
+      Value:
+        _serializedList:
+        - Key: 1
+          Value:
+            <Value>k__BackingField: 2
+            <ModificationType>k__BackingField: 1

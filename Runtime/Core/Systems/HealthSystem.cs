@@ -108,9 +108,8 @@ namespace StdNounou.Health
         }
         public virtual void InflictDamages(DamagesData damagesData)
         {
-            if (!damageCalculator.TryCalculateDamages(this.Stats.StatsHandler, damagesData.Stats, damagesData.DamagerAffiliation, out float damages, out bool isCrit))
+            if (!damageCalculator.TryCalculateDamages(this.Stats.StatsHandler, damagesData.Stats, damagesData.DamagerAffiliation, damagesData.AttackAttributes, out float damages, out bool isCrit))
                 return;
-
             if (damagesData.Stats.TryGetValue(E_StatsKeys.KnockbackForce, out float force))
             {
                 SO_Affiliation selfAffiliation = this.Stats.StatsHandler.GetAffiliation();
@@ -121,6 +120,7 @@ namespace StdNounou.Health
             this.OnTookDamages?.Invoke(new InflictedDamagesData(
                 damager: damagesData.Damager,
                 damagerAffiliation: damagesData.DamagerAffiliation,
+                attackAttributes: damagesData.AttackAttributes,
                 damagesType: damagesData.DamagesType,
                 damages: damages,
                 isCrit: isCrit,

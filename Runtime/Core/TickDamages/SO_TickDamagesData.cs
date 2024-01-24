@@ -10,6 +10,7 @@ namespace StdNounou.Health
         [field: SerializeField] public string ID { get; private set; }
 
         [field: SerializeField] public SO_DamagesType DamagesType { get; private set; }
+        [field: SerializeField] public SO_Attribute[] Attributes { get; private set; }
 
         [field: SerializeField] public bool Stackable { get; private set; }
         [field: SerializeField, Range(0, 100)] public float ChancesToApply { get; private set; } = 50;

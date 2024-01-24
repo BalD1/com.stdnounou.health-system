@@ -13,19 +13,23 @@ namespace StdNounou.Health
         [NonSerialized] private Dictionary<E_StatsKeys, float> damagerStats;
         private SO_Affiliation damagerAffiliation;
         [NonSerialized] private SO_Affiliation.S_AffiliationModifiers affiliationModifiers;
+        [NonSerialized] private SO_Attribute[] attackAttributes;
         [NonSerialized] private bool hasAffiliationModifiers;
+        [NonSerialized] private bool hasAttributes;
         public StatsHandler GetOwnerHandler { get => ownerHandler; }
         public Dictionary<E_StatsKeys, float> GetDamagerStats { get => damagerStats; }
         public SO_Affiliation GetDamagerAffiliation { get => damagerAffiliation; }
         public SO_Affiliation.S_AffiliationModifiers GetAffiliationModifiers { get => affiliationModifiers; }
+        public SO_Attribute[] GetAttackAttributes { get => attackAttributes; }
         public bool GetHasAffiliationModifiers { get => hasAffiliationModifiers; }
+        public bool GetHasAttributes { get => hasAttributes; }
 
         [SerializeField] private SO_SingleStatCalculator baseDamageCalculator;
         [SerializeField] private SO_SingleStatCalculator[] calculators;
 
         private bool isCrit_keep;
 
-        public bool TryCalculateDamages(StatsHandler ownerHandler, Dictionary<E_StatsKeys, float> damagerStats, SO_Affiliation damagerAffiliation, out float damages, out bool isCrit)
+        public bool TryCalculateDamages(StatsHandler ownerHandler, Dictionary<E_StatsKeys, float> damagerStats, SO_Affiliation damagerAffiliation, SO_Attribute[] attackAttributes, out float damages, out bool isCrit)
         {
             if (ownerHandler.TryGetAffiliationModifiersOf(damagerAffiliation, out affiliationModifiers))
             {
@@ -40,6 +44,7 @@ namespace StdNounou.Health
             }
             this.ownerHandler = ownerHandler;
             this.damagerAffiliation = damagerAffiliation;
+            this.attackAttributes = attackAttributes;
             this.damagerStats = damagerStats;
             damages = 0;
             isCrit = false;

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d8b696544624c488aa14a6fb1ce427, type: 3}
   m_Name: StatCalculator_DRBase
   m_EditorClassIdentifier: 
-  calculateReceivingAffiliationStatModifierFirst: 0
+  calculationOrder: 000000000100000002000000
