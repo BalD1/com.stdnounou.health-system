@@ -1,0 +1,17 @@
+{
+    "name": "stdnounou.health.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0a4e593a1b8a4364695305d675761667",
+        "GUID:0d65812dd7a6e7240960aa6f680de626"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

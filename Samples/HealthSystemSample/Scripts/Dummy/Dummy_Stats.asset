@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67ee100191459346b45199fa78339b4, type: 3}
+  m_Name: Dummy_Stats
+  m_EditorClassIdentifier: 
+  <EntityName>k__BackingField: Dummy
+  <Affiliation>k__BackingField: {fileID: 11400000, guid: 95c9001f76d6c334187f670346027b8f, type: 2}
+  <Stats>k__BackingField:
+    _serializedList:
+    - Key: 0
+      Value:
+        <LowestAllowedValue>k__BackingField: 0
+        <Value>k__BackingField: 100
+        <HigherAllowedValue>k__BackingField: 1000

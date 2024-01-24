@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9914a23dbc39ea4f84dc6b4e2433902, type: 3}
+  m_Name: TxtPopup_CritDamage
+  m_EditorClassIdentifier: 
+  <TravelSpeed>k__BackingField: 7
+  <FadeSpeed>k__BackingField: 5
+  <Lifetime>k__BackingField: 1.2
+  <TargetPosition>k__BackingField: {x: 0, y: 0, z: 0}
+  <TextColor>k__BackingField: {r: 0.8207547, g: 0.19985314, b: 0.16647384, a: 1}
+  <Scale>k__BackingField: {x: 1.2, y: 1.2}
+  <AlphaFadeLifetimeStart>k__BackingField: 45
+  <TMPPrefab>k__BackingField: {fileID: 11400000, guid: 74ebbf71af686334abde841dc1dbb6ab, type: 2}

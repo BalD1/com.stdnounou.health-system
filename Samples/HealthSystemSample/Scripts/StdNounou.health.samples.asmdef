@@ -1,0 +1,19 @@
+{
+    "name": "stdnounou.health.samples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d525ad6bd40672747bde77962f1c401e",
+        "GUID:07390520b8bc5a54cb973a134834aabf",
+        "GUID:6ddfdff7ac37b354883336b81ebb5114",
+        "GUID:0d65812dd7a6e7240960aa6f680de626"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
