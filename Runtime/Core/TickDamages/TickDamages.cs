@@ -1,5 +1,4 @@
 using StdNounou.Core;
-using StdNounou.Core.Editor;
 using StdNounou.Stats;
 using StdNounou.Tick;
 using System;
@@ -11,10 +10,10 @@ namespace StdNounou.Health
     [System.Serializable]
     public class TickDamages : ITickable, IDisposable
     {
-        [field: SerializeField, ReadOnly] public SO_TickDamagesData Data { get; private set; }
-        [SerializeField, ReadOnly] private object damager;
-        [SerializeField, ReadOnly] private StatsHandler externalStatsHandler;
-        [SerializeField, ReadOnly] private IDamageable targetDamageable;
+        public SO_TickDamagesData Data { get; private set; }
+        private object damager;
+        private StatsHandler externalStatsHandler;
+        private IDamageable targetDamageable;
 
         private int currentTicks;
 

@@ -18,3 +18,4 @@ MonoBehaviour:
   color: {r: 1, g: 0.5102247, b: 0, a: 1}
   <OwnerDamagesPercentage>k__BackingField: 100
   <TickDamagesData>k__BackingField: {fileID: 11400000, guid: b998fad349fc3c64881fd1926e50057f, type: 2}
+  <TicksLifetime>k__BackingField: 20

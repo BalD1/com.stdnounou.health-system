@@ -1,5 +1,4 @@
 using UnityEngine;
-using StdNounou.Core.Editor;
 using StdNounou.Stats;
 using System.Collections.Generic;
 using StdNounou.Core;
@@ -13,7 +12,7 @@ namespace StdNounou.Health.Samples
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private float force;
 
-        [SerializeField, ReadOnly] private SO_MagicProjectileData data;
+        private SO_MagicProjectileData data;
 
         private GameObject sender;
         private StatsHandler senderStats;

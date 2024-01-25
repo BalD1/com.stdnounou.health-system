@@ -1,6 +1,5 @@
 using StdNounou.Core;
 using StdNounou.Core.ComponentsHolder;
-using StdNounou.Core.Editor;
 using StdNounou.Stats;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ namespace StdNounou.Health.Samples
 
         [SerializeField] private MagicProjectile magicProjectile_PF;
         [SerializeField] private SO_MagicProjectileData baseMagicProjectileData;
-        [SerializeField, ReadOnly] private SO_MagicProjectileData currentMagicProjectileData;
+        private SO_MagicProjectileData currentMagicProjectileData;
 
         private void Awake()
         {

@@ -358,10 +358,7 @@ MonoBehaviour:
   owner: {fileID: 348668755}
   <Stats>k__BackingField: {fileID: 348668758}
   damageCalculator: {fileID: 11400000, guid: fcb7b692508f8f2459d43d2cbf59c9b2, type: 2}
-  <CurrentHealth>k__BackingField: 0
-  <CurrentMaxHealth>k__BackingField: 0
   <HealthPopupOffset>k__BackingField: {x: 0, y: 1, z: 0}
-  <InvincibilityTimer>k__BackingField: 0
   ED_debugMode: 0
 --- !u!114 &348668758
 MonoBehaviour:
@@ -950,7 +947,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Attributes :
+  m_text: 'Attributes:
 
     Plant
 
@@ -981,7 +978,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.75
+  m_fontSize: 4.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1870,7 +1867,6 @@ MonoBehaviour:
   firePoint: {fileID: 58549232}
   magicProjectile_PF: {fileID: 7604902495454634777, guid: 81b59e2a72a8f2a4ebf78401ff6592f5, type: 3}
   baseMagicProjectileData: {fileID: 11400000, guid: 925b8424e1abf3c40a1001c621429937, type: 2}
-  currentMagicProjectileData: {fileID: 0}
 --- !u!1 &1902141432
 GameObject:
   m_ObjectHideFlags: 0

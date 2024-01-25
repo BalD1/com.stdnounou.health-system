@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using StdNounou.Core;
-using StdNounou.Core.Editor;
 using StdNounou.Stats;
 using static StdNounou.Health.IDamageable;
 
@@ -15,15 +14,15 @@ namespace StdNounou.Health
         [field: SerializeField] public MonoStatsHandler Stats { get; private set; }
         [SerializeField] private SO_DamageCalculator damageCalculator;
 
-        [field: SerializeField, ReadOnly] public float CurrentHealth { get; protected set; }
-        [field: SerializeField, ReadOnly] public float CurrentMaxHealth { get; protected set; }
+        public float CurrentHealth { get; protected set; }
+        public float CurrentMaxHealth { get; protected set; }
 
         public Dictionary<string, TickDamages> UniqueTickDamages { get; private set; } = new();
         public Dictionary<string, List<TickDamages>> StackableTickDamages { get; private set; } = new();
 
         [field: SerializeField] public Vector3 HealthPopupOffset { get; private set; }
 
-        [field: SerializeField, ReadOnly] public float InvincibilityTimer { get; protected set; }
+        public float InvincibilityTimer { get; protected set; }
 
         public event Action<InflictedDamagesData> OnTookDamages;
         public event Action<float> OnHealed;
