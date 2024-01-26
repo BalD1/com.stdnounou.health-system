@@ -1,6 +1,6 @@
 {
     "name": "stdnounou.health.runtime",
-    "rootNamespace": "",
+    "rootNamespace": "StdNounou.Health",
     "references": [
         "GUID:07390520b8bc5a54cb973a134834aabf",
         "GUID:243cb9a95146b6548985b4ad65256056",

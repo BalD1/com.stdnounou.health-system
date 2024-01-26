@@ -1,6 +1,6 @@
 {
   "name": "com.stdnounou.health-system",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "displayName": "Health System",
   "description": "This is a system that will let you damage, heal, and kill an object.",
   "unity": "2021.3",
