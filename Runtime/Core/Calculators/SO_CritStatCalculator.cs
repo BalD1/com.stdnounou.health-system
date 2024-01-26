@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace StdNounou.Health
 {
-    [CreateAssetMenu(fileName = "New Crit Stat Calculator", menuName = "StdNounou/Scriptables/Health/StatCalculator/Crit")]
+    [CreateAssetMenu(fileName = "New Crit Stat Calculator", menuName = "StdNounou/Scriptables/Health/StatCalculator/Crit", order = 0)]
     public class SO_CritStatCalculator : SO_SingleStatCalculator
     {
         public override void CalculateStat(SO_DamageCalculator calculator, ref float currentDamagesValue)

@@ -4,7 +4,7 @@ using StdNounou.Stats;
 
 namespace StdNounou.Health
 {
-    [CreateAssetMenu(fileName = "New TickDamages Data", menuName = "StdNounou/Scriptables/TickDamages/Data")]
+    [CreateAssetMenu(fileName = "New TickDamages Data", menuName = "StdNounou/Scriptables/Health/TickDamagesData", order = 50)]
     public class SO_TickDamagesData : ScriptableObject
     {
         [field: SerializeField] public string ID { get; private set; }

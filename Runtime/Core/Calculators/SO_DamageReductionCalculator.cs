@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace StdNounou.Health
 {
-	[CreateAssetMenu(fileName = "New DamagesReduction Stat Calculator", menuName = "StdNounou/Scriptables/Health/StatCalculator/DamagesReduction")]
+	[CreateAssetMenu(fileName = "New DamagesReduction Stat Calculator", menuName = "StdNounou/Scriptables/Health/StatCalculator/DamagesReduction", order = 0)]
 	public class SO_DamageReductionCalculator : SO_SingleStatCalculator
 	{
         public override void CalculateStat(SO_DamageCalculator calculator, ref float currentDamagesValue)

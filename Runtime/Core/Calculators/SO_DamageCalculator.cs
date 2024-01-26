@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace StdNounou.Health
 {
-    [CreateAssetMenu(fileName = "New Damages Calculator", menuName = "StdNounou/Scriptables/Health/Damages Calculator")]
+    [CreateAssetMenu(fileName = "New Damages Calculator", menuName = "StdNounou/Scriptables/Health/Damages Calculator", order = 0)]
     public class SO_DamageCalculator : ScriptableObject
     {
         [NonSerialized] private StatsHandler ownerHandler;
