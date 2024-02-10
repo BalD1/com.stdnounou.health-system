@@ -11,6 +11,19 @@ It includes:
 - Health & Heal customizable popups
 - Knockback
 
+## __HEALTH SYSTEM__ :
+The default Health System inherits from the [IDamageable interface](https://github.com/BalD1/com.stdnounou.health-system/blob/main/Runtime/Core/IDamageable.cs). It uses our [Stats System](https://github.com/BalD1/com.stdnounou.stats-system) to get the entity's Max Health stat.
+
+There is 2 ways of inflicting damages to an entity :
+- The simplest one is by calling ```public virtual bool TryInflictDamages(float damages, bool isCrit)```. This method is very straightforward, and inflicts pure damages, ignoring all resistances or reductions.
+- The more complex one is by calling ```public virtual bool TryInflictDamages(DamagesData damagesData)```.    
+DamagesData is an EventArgs containing informations abouter the entity sending the damages, such as it's affiliations, stats, attributes, ...
+
+Either way, the OnTookDamages event will be called, sending a InflictedDamagesData args, which will contain more informations than the DamagesData one, like the final damages, wherever it was a critical hit, ...
+
+This method will take the damages input, and calculate them through the DamagesCalculator (see below).
+There also are other useful methods like OnDeath Subscribers, Invincibility timer, Revive, Heal, ...
+
 ## __TICK DAMAGES__ :
 The Tick Damages will embark different datas
 ![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/cc70dda9-4780-4fa2-82ee-cf823137f2e2)
