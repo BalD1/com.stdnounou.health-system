@@ -47,18 +47,18 @@ The Tick Damages will embark different datas
 
 ## __CALCULATORS__ :
 The calculators will let you customize the damages calculation.
-![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/e90e2b20-ed86-4146-8c4a-7e07ccaee6d5)
+![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/e90e2b20-ed86-4146-8c4a-7e07ccaee6d5)    
 This is the default calculator.
 
 - Base Damage Calculator : The order of modifiers calculation for the sender's damages stat
-![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/6f68601d-f48b-4118-8d4a-549b010c424b)
+![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/6f68601d-f48b-4118-8d4a-549b010c424b)    
 Here :
   - The calculator will start by calculating the receiver's Affiliation modifiers against the sender's
   - Then, the sender's Affiliation modifiers against the receiver's
   - Finally, the receiver's Attributes modifiers
 
 Once the Base Damages stat has been calculated, the calculator will move on to the next steps
-![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/c4ade563-dda5-4925-88d2-cbaeb4cf819d)
+![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/c4ade563-dda5-4925-88d2-cbaeb4cf819d)    
 Here; 
 - The calculator will first roll a Crit, if the crit triggered, apply the multiplier
 - Then apply any Damages Reductions available.
@@ -68,10 +68,10 @@ You can add any calculations you wish, or move their order, and give any Health 
 ## __HEALTH TEXT POPUP__ :
 The Health Text Popup is an additional module that will display the lost or gained health.    
 ![gif](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/3bba4baf-afc5-4a25-837f-5c359b3e22cf)    
-![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/389c96ff-c694-4f33-bc73-a75012d1ef58)
+![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/389c96ff-c694-4f33-bc73-a75012d1ef58)    
 
 It is based on our TextPopup Component, and you can give them custom Data.    
-![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/7a149517-8694-4870-b1f7-ebf8cdc1f71a)
+![image](https://github.com/BalD1/com.stdnounou.health-system/assets/24933826/7a149517-8694-4870-b1f7-ebf8cdc1f71a)    
 
 
 # __DEPENDECIES__ :
