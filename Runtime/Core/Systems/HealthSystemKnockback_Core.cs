@@ -22,12 +22,11 @@ namespace StdNounou.Health.Core
             healthSystem.OnTookDamages -= PerformKnockback;
         }
 
-        protected override void Awake()
+        protected virtual void Awake()
         {
             componentHolder = componentsHolderObj.GetComponent<IComponentHolder>();
             SetHealthSystem();
             SetBody();
-            base.Awake();
         }
 
         protected virtual void SetHealthSystem()

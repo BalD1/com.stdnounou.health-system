@@ -45,9 +45,8 @@ namespace StdNounou.Health
 
         }
 
-        protected override void Awake()
+        protected virtual void Awake()
         {
-            base.Awake();
             textPopupList = new List<TextPopup>();
         }
 

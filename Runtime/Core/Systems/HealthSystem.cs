@@ -44,10 +44,9 @@ namespace StdNounou.Health
             Stats.StatsHandler.OnStatChange -= OnStatChange;
         }
 
-        protected override void Awake()
+        protected virtual void Awake()
         {
             if (Stats == null) Stats = this.GetComponent<MonoStatsHandler>();
-            base.Awake();
         }
 
         private void Start()
